@@ -64,3 +64,43 @@ function generateMarkdown(data) {
   let fileData =
   `# ${data.title}
 ![alt text](${licenseBadge})
+
+## Description
+${data.description}
+
+## Table Of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Credit](#credit)
+* [Questions](#questions)
+* [License](#license)
+
+## Installation
+Please use the following console command to install project dependancies: ${data.installation}
+
+## Usage
+${data.usage}
+
+## Contributing
+${data.contribute}
+
+## Tests
+${data.tests}
+
+## Credit
+Created By: ${data.name}  
+Creator Github Profile: https://github.com/${data.github}
+
+## Questions
+Have any questions about this project? Please send me an email at ${data.email}.
+Feel free to take a look at this project's Github repository (along with my other work) on my Github profile: https://github.com/${data.github}.
+
+${licenseSection}
+`;
+  return fileData;
+}
+
+module.exports = { generateMarkdown };
